@@ -1,0 +1,66 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang++-12 build active file",
+            "command": "/usr/bin/clang++-12",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "${workspaceFolder}/*.cpp",
+                "-I/usr/include/gstreamer-1.0",
+                "-I/usr/lib/aarch64-linux-gnu/glib-2.0/include",
+                "-I/usr/include/glib-2.0",
+                "-L/usr/lib/aarch64-linux-gnu",
+                "-L/usr/local/lib/aarch64-linux-gnu/gstreamer-1.0",
+                "-lgobject-2.0",
+                "-lgstrtspserver-1.0",
+                "-lgstbase-1.0",
+                "-lgstreamer-1.0",
+                "-lglib-2.0",
+                "-lpthread",
+                "-lopencv_core",
+                "-lopencv_videoio",
+                "-lopencv_imgcodecs",
+                "-lopencv_highgui",
+                "-lopencv_imgproc",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/clang++-12"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang++-12 build release active file",
+            "command": "/usr/bin/clang++-12",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-std=c++20",
+                "-O3",
+                "${workspaceFolder}/*.cpp",
+                "-I${workspaceFolder}/common/",
+                "-lpthread",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "compiler: /usr/bin/clang++-12"
+        }
+    ]
+}
